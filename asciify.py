@@ -65,27 +65,14 @@ def runner(path):
     image = do(image)
 
     # To print on console
-    print(image)
+    # print(image)
 
     # Else, to write into a file
     # Note: This text file will be created by default under
     #       the same directory as this python file,
     #       NOT in the directory from where the image is pulled.
-    f = open('img.txt','w')
-    f.write(image)
-    f.close()
+    #f = open('img.txt','w')
+    #f.write(image)
+    #f.close()
+    return image
 
-'''
-method main():
-    - reads input from console
-    - profit
-'''
-if __name__ == '__main__':
-    import sys
-    import urllib.request
-    if sys.argv[1].startswith('http://') or sys.argv[1].startswith('https://'):
-        urllib.request.urlretrieve(sys.argv[1], "asciify.jpg")
-        path = "asciify.jpg"
-    else:
-        path = sys.argv[1]
-    runner(path)
